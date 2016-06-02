@@ -33,7 +33,7 @@ public class WikiNodeIterable implements Iterable<Node> {
 	    this.root = root;
 	}
 
-	@Override
+	
 	public Iterator<Node> iterator() {
 		return new WikiNodeIterator(root);
 	}
@@ -59,12 +59,12 @@ public class WikiNodeIterable implements Iterable<Node> {
 		    stack.push(root);
 		}
 		
-		@Override
+		
 		public boolean hasNext() {
 			return !stack.isEmpty();
 		}
 
-		@Override
+		
 		public Node next() {
 			// if the stack is empty, we're done
 			if (stack.isEmpty()) {
@@ -84,7 +84,7 @@ public class WikiNodeIterable implements Iterable<Node> {
 			return node;
 		}
 		
-		@Override
+		
 		public void remove() {
 			throw new UnsupportedOperationException();
 		}
